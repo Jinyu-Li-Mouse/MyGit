@@ -1,0 +1,57 @@
+git init  初始化
+git  status  查看状态
+touch  index.html  创建文件
+git  config --global  user.name 'test'  配置用户名
+git  config --global user.email '11@.163.com'  配置Email
+git add  'index.html'  添加
+git  rm --cached index.html 删除未提交的记录
+git  add *.html  添加某类文件 
+git  add . 添加所有文件
+git  commit - m '备注信息' 提交时备注
+touch .gitignore   忽略不想添加的文件
+git branch  +分支名   创建分支
+git chechout +分支名 切换分支
+git  merge  +分支  合并分支
+git remote  查看是否有地址
+
+Jinyu-Li-Mouse
+loverlin1314521
+git remote add origin https://github.com/Jinyu-Li-Mouse/MyGit.git  添加远程仓库
+git push -u origin master
+
+git  clone  +地址  克隆远程仓库
+git branch -a   查看分支
+
+git branch –D 分支名  删除本地未合并的分支
+git branch –d 分支名  删除本地已经合并了的分支
+
+ git branch -r -d origin/FirstBrache  删除远程分支
+git push origin :FirstBrache
+
+git push --set-upstream origin branch_name 创建并同步远程分支
+
+git remote remove origin  2.取消本地目录下关联的远程库
+
+
+
+ 		               //回滚，放弃本次修改，回滚至上一次提交版本
+git branch -a		               	//查看所有分支
+git branch aaa		               //创建分支名为aaa的本地分支
+git branch -d aaa		          	//删除本地分支——>aaa
+git branch -r -D origin/aaa	          	//删除本地远程分支——>aaa
+git push origin --delete aaa			         //删除git服务器上的aaa分支
+git checkout aaa			               //切换到aaa分支
+git merge aaa				                 //合并aaa分支中的代码到当前分支 （合并前拉一下aaa分支代码，防止冲突）
+git stash	                          //暂存区，修改的代码不想提交，可以先放到暂存区
+git stash pop                  //回滚暂存区存储的代码
+git reset --hard origin/$branch     //放弃修改，回归修改前版本
+
+//Untracked files:
+  (use "git add <file>..." to include in what will be committed)//
+
+git clean -f  使用之后，报错权限被拒绝
+git clean -d -fx    会删掉很多文件。。不建议使用
+
+git ls-files -d | xargs echo -e | xargs git checkout --  恢复被删除的文件
+rm -rf .git   删除本地仓库
+
